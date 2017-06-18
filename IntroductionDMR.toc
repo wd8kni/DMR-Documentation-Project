@@ -1,0 +1,27 @@
+\contentsline {section}{\numberline {1}FORWARD}{1}{section.1}
+\contentsline {section}{\numberline {2}Copyright}{1}{section.2}
+\contentsline {section}{\numberline {3}About this Document}{4}{section.3}
+\contentsline {section}{\numberline {4}Introduction}{5}{section.4}
+\contentsline {section}{\numberline {5}TALK GROUP(s)}{6}{section.5}
+\contentsline {section}{\numberline {6}STATIC vs PTT}{7}{section.6}
+\contentsline {section}{\numberline {7}Equipment}{10}{section.7}
+\contentsline {section}{\numberline {8}Code Plug}{11}{section.8}
+\contentsline {section}{\numberline {9}Operator Skills}{12}{section.9}
+\contentsline {section}{\numberline {10}How it Works}{13}{section.10}
+\contentsline {subsection}{\numberline {10.1}SYNC/SIGNALING)}{15}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}CODEC}{15}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}BACK END}{15}{subsection.10.3}
+\contentsline {subsection}{\numberline {10.4}CODE PLUGS (More Detail)}{16}{subsection.10.4}
+\contentsline {section}{\numberline {11}Definitions}{16}{section.11}
+\contentsline {subsection}{\numberline {11.1}DMR ID}{16}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Time OUT}{16}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Admit Criteria}{16}{subsection.11.3}
+\contentsline {subsection}{\numberline {11.4}Color Code}{17}{subsection.11.4}
+\contentsline {subsection}{\numberline {11.5}Time Slice}{17}{subsection.11.5}
+\contentsline {subsection}{\numberline {11.6}Power to use on this channel}{17}{subsection.11.6}
+\contentsline {subsection}{\numberline {11.7}Talk Group}{17}{subsection.11.7}
+\contentsline {subsection}{\numberline {11.8}ZONE}{17}{subsection.11.8}
+\contentsline {section}{\numberline {12}Extending your world}{18}{section.12}
+\contentsline {section}{\numberline {13}Get Involved}{18}{section.13}
+\contentsline {section}{\numberline {14}Document tracking}{18}{section.14}
+\contentsline {section}{\numberline {15}Project Contributors}{19}{section.15}

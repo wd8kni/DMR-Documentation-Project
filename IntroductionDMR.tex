@@ -1,0 +1,394 @@
+\documentclass[12pt]{article}
+\renewcommand\familydefault{\sfdefault}
+
+
+% build standard phrases below with \newcommand
+\newcommand{\ProjectName}{DMR Document Project}
+\newcommand{\ProjectDocumentName}{Introduction to DMR}
+\newcommand{\MyDocVersion}{Document Version V1.6}
+\newcommand{\DocVersionDate}{June 17, 2017}
+
+
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tocloft}
+\usepackage{float}
+\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}  % add to get dot leader on TOC article Class
+
+% Header and Footer stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{lastpage}
+\lhead{\ProjectName}
+\chead{}
+\rhead{\textbf{\ProjectDocumentName}}
+\lfoot{\MyDocVersion}
+\cfoot{\DocVersionDate}
+\rfoot{Page\ \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Document starts here
+\begin{document}
+
+% Title Page Stuff
+\begin{titlepage}
+	\begin{center}
+	\line(1,0){300}\\
+	[0.25in]
+	\Huge{\bfseries Introduction to DMR}\\
+	[2mm]
+	\line(1,0){300}\\
+	{\Large The DMR Documentation Project}\\
+	{\large An introduction for DMR users}\\
+	\vspace{4in}
+	{\large github URL HERE}\\
+	\vspace{1in}
+	{\normalsize \MyDocVersion}
+	\end{center}
+\end{titlepage}
+
+\section{FORWARD}
+This document is a work in progress.  If you have received a copy of this document understand that it may not be the most recent version of this document.  The intent is to eventually have this document available as a DMR Documentation project on GitHub.  
+
+Search for later versions of the document there.  ?????????
+
+\section{Copyright}
+This document is released under the ``The 3-Clause BSD License'' BSD-3-Clause. 
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\\
+
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.  
+
+
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\listoffigures
+
+\clearpage
+
+\section{About this Document}
+This Introduction is written by Fred Moore, WD8KNI.   
+
+Early in 2017 I decided to get involved with DMR and purchased a TYT MD-380 radio. Thats when the real learning began.  
+
+As I progressed and started asking questions I found that while many people had an understanding of DMR, not many had a true understanding of the mode, at least they did not understand it well enough to accurately answer some of my questions.  Seeking this knowledge lead me down a month long learning curve.  As I always find when attempting to learn something new, the things I learned at the end cemented the whole thing together.  
+
+While I am a technical person and not easily confused because I actually read documentation, let me pass on just some of the things that caused confusion before we get into the meat of this document.  
+
+Anyone that has been around VHF/UHF repeaters for any time knows that these are 5 KHZ frequency modulated signals.  But when you talk to DMR knowledgeable people they talk about standard FM as being 25 KHZ wide.  After reading several documents on DMR, suddenly I realized they were not talking about the maximum deviation allowed (the actual channel width) they were talking about the channel spacing or the absolute maximum width of a channel, not the amount of space the signal was actually being consumed.  The DMR folks talk about narrow band FM being 12.5 Khz, I asked two Motorola guys about the width of a DMR signal, both said it was 12.5 Khz wide.  Later I determined they were again talking about the channel spacing, not the actual bandwidth of the signal, but wait then they talk also talk about 6.5 Khz DMR channel efficiency. One experienced Motorola service technician actually told me that a DMR signal is 6.5 Khz wide.  
+
+What they are saying is that you can have two simultaneous conversations on a 12.5 Khz channel, or it will have the same efficiency as if you were using two 6.5 Khz signals side by side. I am still asking what 6.5 has to do with anything except marketing.
+
+Want some more confusion, how about installing a ``Code Plug'' in each DMR radio.  Don't start look where the plug is on your radio, they are talking about software loaded into the radio.  Now how about a ZONE, when you ask they tell you to think about a ``zone'' as a repeater.  When they are actually talking about a grouping of radio channels. This grouping could be for one repeater, or multiple repeaters, or even a city, depending on how YOU decide to put them in your Code Plug.
+
+If you are lucky a friend will pass along a code plug already written for your radio in your area, to get you started. They will further tell you to meet them on the ``North American'' Talk Group.  No matter how hard you try you cannot hear or talk to them.  Then someone says are you on the right Network.  How do I tell my radio what network to use, I only have a channel selector, and a PTT button.  
+
+And away you go, if you are persistent you will dig in your heals and jump to everything you can read on the subject, or like many, you sell the radio at the next swap fest, and get back on a normal repeater.  
+During the last several months I have talked to many people, I learned about their confusion, and listened to the new guys on the air.  There is much confusion that is easily put to bed at the beginning, and should not be held to the end of the learning cycle.  
+
+The audience of this documentation is the new DMR radio operator, my hopes is that it will quickly move you forward before you fall into the deep DMR well.  DMR is a subject that is actually simple if explained in simple terms, or as complex as you want it to be if you really want to dig into the details of how it works. \section{Introduction}
+In Ham Radio communication our thought process revolves around the specific frequency we are listening to. We use HF to talk to people all over the world, In VHF/UHF it revolves around the local ham radio community, the people that you talk to on simplex, or a repeater.
+
+One trait that the human race has had from the dawn of time was to expand our horizon, we wanted to talk to and learn from more and more people so we had to expand our communication world.  This was more problematic for the ham radio operator who elected to operate on VHF/UHF, than it was for the HF operator.  
+
+When I think about this VHF/UHF expansion I tend to think about it in this progression, first we talked to each other using simplex a one to one, or a one to many relationship, depending on who could hear our signal.  Then we developed repeaters allowing more people in the local area to communicate.  As repeaters were moved to higher and higher locations the coverage was expanded even more.  
+
+We then learned how to link remote receivers and to select the best signals on signal to noise ratios (voters), allowing more and more people to communicate.  
+
+Then these same radio links used to select the best signals were pointed to other repeaters in communication range, and suddenly wide area repeaters started to grow.  
+
+In 100\% of the cases this involved Analog Radio links.  These links for all practical purpose can be viewed and should be viewed as an ``Audio Channel''.  At that time, and even today we don't use this term but that is exactly what they are.   
+
+The audio channel concept is key to understanding how not only DMR works but how all digital communication occurs when a network is involved. The internet can carry billions of digital channels per second. A digital channel is just data, think about a Compact Disk (CD) this was the first great digital media for consumers, this single digital channel carried music, or more precisely and audio channel converted to and from a digital stream.
+
+Thinking about the concept of a digital channel and an audio channel, is not confusing, but you must separate them in your mind.  When people think about an audio channel they are thinking about an end to end conversation.  When you think about a simplex conversation, the concept is that you speak into the microphone and it comes out the other end on a speaker, when they talk back the same thing happens. 
+
+But what really happened? Your analog audio was converted to an RF signal for use by the transmitter, received by the receiver and converted back into audio by the receiver.  Now when we put a repeater into the mix the same thing happening it just involve two other receiver transmitter pairs.  
+
+But what about the other million conversations going on, all over the world?  In the HF world we separated these conversations by selecting the proper frequency and antenna. In the analog VHF/UHF world we separated these conversations by selecting the simplex frequency we selected or the repeaters we could reach.  
+
+In the digital world (internet) there are millions and millions of digital streams going on all the time.  Some streams contain voice, some video, some text, even computer programs or web pages. If we want to listen in on the digital audio world not only must we select the frequency we want to listen to on our radio, or repeater we must also select the digital channel we want to listen to, we even have to decide what digital to analog converter we want encode or decode audio with i.e. the CODEC.  
+
+In the DMR world the digital channel we listen to is defined as the TALK GROUP.  The TAlK GROUP carries the conversation we want to listen to.  This is complicated by the fact that just because we selected a TALK GROUP to listen to, that repeater may not be carrying the TALK GROUP we want to listen to at that moment.  This is part of the learning curve in DMR.
+
+\section{TALK GROUP(s)}
+So what is a TALK GROUP? For those who remember the early telephone systems, and the concept of the party line, this is exact analogy what a talk group is.  If you are old enough to remember, (some might have forgotten) it worked like this.  
+
+Two wires were run down the street for long distances, these lines carried not only the ringing voltage, but also one duplex conversation. Everyone on a street was hooked to the same wire pair in parallel. If two people had their phone ``off hook'' and were talking, anyone on the same wire pair (party line) could pick up their phone and join the conversation, or just listen in. 
+
+The key here is that at any one time two or more people could be talking on the line, and unless you picked up your phone you didn't know the conversation was happening. Also think about Schrödinger's cat.  There might not be anyone at all talking on the digital channel, but does it still exist? The wire was still there wasn't it?  In any one city hundreds of different party lines would, could, and did exist. Usually one street for each party line as it was easier to install that way.  If someone wanted to talk to someone on the party they clicked the on-hook button two times and the operator would come on the line and say ``number please''  (yes this is politically correct as almost all operators were women) she would then generate ring pulses on your line, so everyone on the line could hear someone was calling. If you were the 5th person on that line she would put 5 ring pulses on the the party line, all of the phones would ring 5 times, but you only picked up on your ring, unless you just wanted to hear the gossip.
+
+But what if you wanted to talk to someone that was on another party line in the same city?  The operator just patched you over with a plug to the other party line, and caused the proper ringing pulses on that line. Now the two (2) party lines were connected.
+
+Now lets relate this concept to DMR.  Think about a digital channel exactly the same as the party line, no conversations could be happening, or multiple people could be on the line talking together.  Many people could just be listening in. There are infinite number of channels, separate and in existence at the same time.  This concept is a TALK GROUP, don't make it any more confusing that that.  There is one exception, only one person can be talking on a TALK GROUP at a time (simplex).
+
+Picking up the receiver to hear the conversation is the same as commanding the repeater to patch into the TALK GROUP.  And the number of rings that identified you, is the same as your DMR ID, so everyone knows what radio is talking on the line.  The only difference is that it is a longer number.
+
+DMR only defines the protocol the radios and repeaters are using to talk to each other, it does not define the network carrying the signals between repeaters. In the DMR world each and every repeater if the operator wants can have it connected to a network or not. But not necessarily the same network.  
+
+Each network carries many TALK GROUP.  These talk groups are identified by generalized names.  ``North America'' would carry conversations going on in Canada and the US, while USA would only carry conversations going on in the United States, these further get broken down by ``Call Areas''.  ``Area 4'' would be the south east US, and so on.  Each talk group is actually a number, but is translated into an english idiom to make your life easier. But does it?
+
+So we have repeaters connected by a network, but not necessarily the same networks. If they are not connected to the same network, they must be connected together by bridges. This operation is performed by the network OPERATOR, the person who maintains the servers and network connections.  These same people also maintain the BRIDGE's connecting networks together.
+
+In DMR the talk group that the repeater is connected to and is broadcasting is controlled by both the repeater control operator (what they allow), the network that it is hooked to, and YOU the operator.  The rest of this white paper is focused in understand the details of DMR and how it is used. As we continue keep in mind the party line phone concept. 
+
+\section{STATIC vs PTT}
+Each repeater owner can decide if they want a talk group to be broadcast continually by default on the repeater (STATIC), or require it to be commanded active by the radio operator (PTT).  This stands for ``Push to Talk'', not Push to Test, as some on DMR users refer to it. 
+
+To explain this assume the repeater has been sitting for 30 minutes with no traffic as a starting point. 
+
+Without anyone keying up locally the repeater will broadcast any TALK GROUPS that the repeater owner has defined as STATIC automatically, no matter where that person is in the world, if they are on that TALK GROUP and on the same network, or bridged to that network they will be heard. But will you hear them?
+
+If you want to hear or talk to this group must have their radio set to the same TALK GROUP.  If the repeater has ``North American'' as static, and you don't have this TALK GROUP selected in your radio, you will not hear, nor will you be able to talk to them. The channel will be busy.
+   
+Lets assume that you want to use another talk group, that the repeater operator has not configured as static.  You simply key your radio with another talk group selected (ker-chunk), this will cause the repeater to drop the static talk group, and now hook up your talk group for a 15 minute period, this is called a PTT or Push to Talk group.  The network server will keep the repeater in this configuration for 15 minutes after the last LOCAL transmission, then revert back to the STATIC talk group.
+
+Each repeater has at least one STATIC talk group that is always present.  That talk group is called ``LOCAL'' (TG9) and is not forward to the network.  Its primary use is for local traffic on the repeater.  Most also carry ``LOCAL NET'' (TG2) that is re-broadcasted over the network the repeater is attached to.  Typically one is assigned to ``Time Slot 1'' and the other is assigned to ``Time Slot 2'' so they can both be used at the same time, i.e. carry two different conversations.  More about Time Slots later.
+
+Almost everyone starting into DMR gets pointed to the 
+\href{http://www.trbo.org/docs/Amateur_Radio_Guide_to_DMR.pdf}{``Amateur Radio Guide to DMR''} to get started. 
+
+``Amateur Radio Guide To Digital Mobil Radio'' is written by John Burningham WA2WXB John is a very knowledgeable about this subject.  Although this might start you in a technical way, and confuse many, I suggest that this may not be a good starting point.  The best place to start may be the history, where DMR came from and the state of DMR as it is on February 2017 (start of this document).
+  
+If you first read John's documentation you walk away with the understanding that this is DMR, but thats far from the whole story.  You do walk with a high level understanding of DMR, however some things are glossed over with terms that are not only confusing, but might also be slightly misleading. To fully understand DMR you need to understand why things are the way they are today in the amateur radio world. 
+
+As you read Johns writings you will learn that DMR is as a European radio standard that was not designed for any particular company.  It was picked up by many companies, in the US the primary company to pickup the standard was Motorola, not only did they pick up the standard they modified, or I might better say the extended the standard. They extended this standard to better enhance their customer base and make more money.  The marketing trademark for Motorola DMR is MOTOTRBO\texttrademark.  When you hear this term we are talking about equipment built and market by Motorola. Motorola is not the only manufacturer.  Others include Hytera\texttrademark, Tytera\texttrademark (Now TyT), Connect Systems\texttrademark, and others. 
+
+Next you might ask, how and why did DMR move into the Amateur Radio community at all? You might also come to the correct conclusion that it was primarily the Motorola service guys around the country and world.  This allowed them to not only use older equipment that they had access to, for ham radio repeaters, it allowed them to add the channels to the existing hand held radios they carried everyday in their normal business dealings. They could also use the existing networking knowledge that they had and understood well.  
+
+Since the majority of commercial DMR businesses was on UHF repeaters, we find that the majority of DMR repeaters are on UHF not VHF.  
+
+I think about DMR as having a front end and backend.  The front end is your radio, and the repeater, the back end is the networking and the infrastructure that keeps the whole world wired together.  Without the networking backend you would only be talking to people who could access the repeater locally.
+
+The back end is 100\% digital and where the TALK GROUPS exist, with two exceptions.  Talk group 2 and 9 are reserved for LOCAL talk on the repeater and typically are not transported over the network, well they actually can be if the operator wishes.
+
+Multiple networks exist that wire the DMR backbone together.  The backend of the DMR-MARC network is held together by c-bridges connected together by the K4USD network.  http://www.k4usd.org network can be seen in operation by accessing http://cbridge.k4usd.org:42420/MinimalNetwatch. Through this and OTHER networks repeaters are connected.  
+
+A better concept is to think about TALK GROUPS getting wired together, as once a repeater is on a network, only the TALK GROUP is something you care about. Since not all DMR repeaters are hooked to the same network. This means that not all repeaters can access the same digital data channel, i.e. TALK GROUP  (more about this later).
+
+K4USD is just one of many DMR-MARC networks that join repeaters using c-bridges. PRN for instance, is North and South Carolina, plus some of Virginia.  C-Bridges (software) connect the repeaters to the network. It's the c-bridges that join the networks together, including bridging to other networks.  
+
+When we think about the standards that Motorola modified and their service guys work under.  This naturally created a network that did not have much flexibility in configuration outside the ``Motorola'' standards.  It also created a network of technicians that resisted going outside of the standards they knew.  I like to think about this as the ``Not Created Here wall''.
+
+If we fast forward from the beginning of DMRs introduction into the ham radio world, to mid 2015, we find that many ham radio operators were forming groups that wanted to expand the network(s) to include equipment that was not Motorola specific.  They also wanted to experiment with home brew equipment.
+  
+Out of frustration these Hams experienced, they created a new network that has grown into a huge network during a short period of time that is still growing exponentially every day.  Its expansion has been faster than the DMR-MARC network. 
+
+I also don't want to imply that there are only two networks in the world, you will see many different networks connecting different repeaters. Our challenge as operators is to understand how things are connected, so we can make connections to friends all over the world. 
+
+This leads us to bridges. Just as a physical bridge gets us across water, a digital bridge gets us across different networks to different TALK GROUPS.  When I first said this to someone they were confused because they were thinking about the internet as the one huge network.  This thought process is not correct.  Think of the network as being a network of computers that are hooked together who have something in common.  
+
+As an example Apple and Microsoft each operate separate networks for their employees to communicate.  These networks don't talk together but they do have gateways to get message between each other.  Just as your local connection to the internet, is not the whole internet, it is just a connection that is routed to the whole network.  The job of a router on a network is go get digital information passed between networks. So the internet is actually millions of separate networks hooked together by routers. We generally don't think about how this is happening, but it does and works very well.
+
+In the US there are two primary ``networks'' of repeaters, the DMR-MARC\texttrademark network and the BrandMeister Network\texttrademark.  Each network carries different digital channels of people talking (TALK GROUPS), in many cases they are named exactly the same, but carry totally different conversations.  In many cases they are bridged together and this bridge carries the same information.  You should understand at this point that the network the repeater is connected to controls what digital information that can be provided to the repeater nothing else.  The network operator controls what other networks are bridged to, and what TALK GROUPS are carried on the bridge.
+
+The primary differences between the networks is the philosophy of the network, the connecting hardware to the repeater, and the repeater hardware they might be using. While the primary philosophy of the DMR-MARC network is 100\% Motorola standards, the philosophy of the BrandMeister network is experimental and hooking up different equipment.  On the DMR-MARC network you are not allowed to hook up your own private hardware (DVAP, OpenSpot. etc.. ). While on the BrandMeister network this is encouraged.  
+I think that this is the primary reason that it has grown as fast as it has over such a short period of time compared to the existing DMR-MARC network.  
+
+Growth of BrandMeister network was generally resisted by the MARK group until, suddenly repeater owners began switching their repeaters and in some cases whole cities from the DMR-MARK to the BrandMeister network.  
+
+An example was Jacksonville Florida, as I understand it the DMR repeater owners in Jacksonville  elected to move all of they're existing DMR-MARC connected repeaters to the BrandMeister network and suddenly everyone on the DMR-MARC network lost connection to the Jacksonville's DMR repeaters.  So suddenly some of the BrandMeister talk-groups were ``bridged'' over the DMR-MARC talk groups.  
+
+So what does this mean to the end user, the guy pushing the PTT on the radio?  Lets take an example of the ``N. American'' talk group, on BrandMeister it is talk group 93 on a DMR network this is talk group 3, the conversations carried are totally different. They might or might not be bridged. If they are bridged they carry the same conversations.  Don't make any assumptions, test and verify because more and more wide area talk groups are becoming bridged automatically each day, the challenge as a DMR operator is to understanding what is bridged, and how to talk to our friends.  
+
+As of this writing many of the major networks are bridged across networks, `North American'', regional talk groups like call area's, and ``state talk'' groups.  However and a trap for new people.  When accessing the ``North American'' TG on a DMR-MARC repeater you must use TG3, When accessing ``North American'' talk group on a BrandMeister connected repeater you must use TG93.  Today the two talk groups are bridged, however you must access them differently depending on where you are coming from.  Keeping this straight is the job of you and the reason for your code plug.
+
+I will not deny that I am pro BrandMeister because I like to experiment and want to have my own hotspot at my house.  You can start learning about the BrandMeister network by starting here: 
+https://brandmeister.network
+
+This link shows the activity on the whole network, and includes under ``services'', ``hoseline'' a software scanner that allows you to select and listen to multiple talk groups on your computer with just a browser.
+
+The programming for your radio for any network is the same, however the information carried on each talk group may, and many times is different.  As I mentioned before the ``North American'' TALK GROUP, on a BrandMeister repeater is not the same TALK GROUP on a DMR-MARC repeater. In order to use both you need to two (2) different channels, one for the Brandmeister and one for the MARK repeater or a TALK GROUP that is defined as a BRIDGE It took me a while to get this concept in my brain.  It seems that this is one concept that many keep forgetting to mention the person new to DMR.
+
+You can find more BrandMeister information and user guides and user guides at: 
+
+https://dmrx.net/files/US\_BM\_User\_Guide.pdf
+
+http://papasys.com/dmr/BrandMeisterGettingStartedGuide.pdf  
+
+\section{Equipment}
+Your choice is wide, from used or new Motorola equipment to equipment manufactured outside the US. At this time there is no Amateur radio equipment manufactured for DMR.  The market for the manufactures is 100\% commercial.  I have heard that some ham radio manufactures are getting into DMR.  This is not a detriment to the ham radio operator at all.  It does however create many operation decisions that make no sense to the Amateur Radio operator, that does make sense in the commercial world.  Unless you are very familiar with Motorola equipment and have access to expensive programming software (260 dollars every 3 years), it would be hard to go wrong with the purchase of a new MD-380 handheld this radio is manufactured by TyT, not to be confused with Hytera that is also a DMR manufacturer.  ``Tytera'' is now TyT and more correctly should be identified by that name (trademark). 
+
+This radio will get you going with a spare battery for less that \$130 bucks, including the programming software, cable, charger and spare battery.  After you get it tested and working I would suggest that you install a software hack that was developed that extends the functionality of the radio greatly (MD-380tools).  This hack software was developed by Travis Goodspeed, and can be found at 
+https://github.com/travisgoodspeed/md380tools.  
+Warren Merkel (KD4Z) has developed a Virtual Machine (VM) that runs under Virtual Box and can be run under Windows, Linux, or Mac, that includes everything you need install, and maintain this very useful modification to the MD-380/390 radio.  His tool chain reduces your understand to only 3 commands from a simple menu.  You can find everything you need here:  https://github.com/KD4Z/md380tools-vm  in both cases make sure you read the documentation on how to set the tools up. 
+
+\section{Code Plug}
+In order to get your radio going, and talking to friends you will need to master creating or get a friend to help you get a code plug installed in your radio.  A code plug is a specific computer file, formatted to containing the settings that go into the radio that defines the parameters required to access a repeater, and the talk groups that you want to use.
+
+When I first got started I was told to think of a Zone as a repeater, a Talk Group as the people I want to talk to, and to relate the Color Code to PL.  The concept of thinking of a zone as a repeater was what threw me for a loop.  While I was able to operate my radio by thinking about it that way with my first code plug a friend provided, It caused great confusion when trying to understand and modify my first code plug.
+  
+More properly you should think of it this way, think about a channel in your analog radios.  A standard channel defines the frequency of your repeater, the frequency offset, or the difference between the transmitted and receive frequency, the PL tone, or the DCS code you are using.  
+
+Now think about all of the repeaters that you use in any one city, if you group all of the channels of a given city together so you can select them easily, that is a zone. You might have elected to call that ZONE, ORLANDO, or JACKSONVILLE, or you might have elected to call it ORLANDO-DMK for the local repeater connected to the MARK network, and ORLANDO-BM for the repeater connected to the BrandMeister network. The convention is 100\% up to you.
+
+When you create a channel in DMR you are relating it to a Receive Frequency, Repeater Offset, Talk Group, Time Slice, Color Code,  this is a channel. If you change ANYTHING that defines a channel you must add a new channel. Because of the large numbers of talk groups, many channels will most likely be assigned to one zone (repeater) because you use them that way.  
+
+If you create channels for standard VHF/UHF wide band repeaters you might group them in one zone, and call it something like ``Orlando FM''. In one case thinking of a zone like a repeater all frequencies are for the same repeater, but different talk groups. in the case of a grouping of FM repeaters thinking of it as a grouping of repeaters in an area is also correct.  You should be thinking of this as a group of channels, and what is in the channels.  See the confusion, if you are not thinking about this correctly. 
+This is what is different between programming DMR and standard FM frequencies in you CODE PLUG. If you think about it this way, much of the confusion will be eliminated.  
+ 
+\section{Operator Skills}
+On all DMR radios after you key your radio about a half second later you hear a tone.  It is higher pitch if you are OK to transmit, and lower tone if is NOT OK to transmit.  This works because the repeater knows if the network is busy or not busy, and if your are sending a signal strong enough to be intelligible.  If you are using DMR on a simplex channel the tone will always be high pitched, unless you have defined your code plug to act differently (Admit Criteria).
+
+At times you will hear someone that is garbled and you can't understand them, this is most likely because of packet loss.  This loss can be a distance from the repeater problem, or a network problem.  You might suggest to the other person if they are on a repeater to increase their power, it just wait and many times it clears up.  Most times you don't know if they are accessing the network via a repeater or a hotspot at their home or mobile. Many DMR operators carry a mobil hot spot in their vehicle with their cell phone providing a network connection.  This way they never have to worry about any repeater programming at all, it then all about TALK GROUPS, where ever they are at. 
+
+As an operator you need to understand a a few quirks of DMR and network timing. One of the most important things is when does the squelch open on your radio?  It only opens the squelch at the START of a conversation on the TALK GROUP.  If you switch to a TALK GROUP and immediately start talking you might be talking over someone who is already talking when you made the change.  Almost everyone programs their repeater with a TIME OUT of 180 seconds in their code plug, so it is conceivable that you started listening to a Talk Group 1 second into the start of their talking and they could talk for 179 more seconds before the channel is released.  In this scenario you would not hear the 179 seconds of audio because you missed the start of the transmission.  So slow down, when you enter a talk group just listen for a while, after a few minutes you will know what is going on and if anyone is using that channel. 
+You also need to consider the network timing, on a popular talk group you could be bringing up 1500 repeaters worldwide, so give some time after you key your radio, wait a few seconds after you get your ``clear to transmit'' tone for them to all get them up and going before you start talking.  Also allow a few second for someone to get involved in the conversation, between transmissions. 
+
+We have not talked about scanning and promiscuous modes at all but they are not only possible, but are used all the time.  It is also possible and many times someone ls listening in a mode that they don't know what TG you are on, and if you just say your call and say listening they might not know what TALK GROUP you were on.  Always say something like WD8KNI on TAC311 or on USA, or Florida etc.. This is the proper way to come onto a Talk Group. 
+
+DMR is also a place you will see many kerchunks of the repeater.  This is the only way that someone can bring a PTT talk group onto a repeater, or change talk groups on their hot spot, so just get use to it.  You will see their DMR ID or Call depending on how your radio is setup.  Don't assume anytime someone kerchunks they want to talk to you. Many times they are just commanding things up so they can listen. 
+ 
+Wide area talk groups are talk groups that cover a large geographical area, things like World Wide, North America, US, Europe.  Generally it is considered bad form to have long conversations on these talk groups, many people monitor these talk groups to find their friends.  You might be monitoring North America to catch a friend, when you find him/her move to a TAC channel which are designed for long winded conversations.  Be Polite. 
+
+\section{How it Works}
+Now for some detail on how DMR works, but first some of the Specification Details:
+
+Channel Spacing:  12.5 Khz
+
+Modulation:  4 - FSK
+
+Modulation Rate 9600 Baud
+
+Access Format:  2 Slot Access (TDMA)
+
+Voice Coder and Rate: DVSI AMBE+2  (3.6 kbps)
+
+DMR uses 4 level Frequency Shift Keying derived from standard modulation techniques.  Each of the four data frequencies can be transmitted in one of two (2) states ``0'' \& ``1''. Information bits are transmitted in pairs, and each pair is assigned a specific frequency shift frequency. (Graphic on page \pageref{fig:DeviationSymbolTable})
+
+\begin{figure}[H]
+ 	\centering
+	\includegraphics[scale=.75]{SymbolDeviationTable}
+	\caption{Deviation Symbol Table}
+	\label{fig:DeviationSymbolTable}
+\end{figure}
+ 
+DMR has two time slots that are defined as TS1 and TS2 each are 30 ms long with a total transmission period of 30ms per time slice.  The repeater transmits a constant stream of data to the receiver.  
+(Graphic on page \pageref{fig:TimeSlot})
+ 
+ \begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5]{TDMA}
+	\caption{Transmission of Time Slots}
+	\label{fig:TimeSlot}
+\end{figure}
+
+ A total TDMA frame is 60ms long, both time slices are sent and referred to as a frame. (Graphic on page \pageref{fig:TDMAFrame})
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.75]{TDMAFrame}
+	\caption{TDMA Frame Payload}
+	\label{fig:TDMAFrame}
+\end{figure}
+
+During each Time Slot in TDMA frame the 264 bits of data is transmitted.  The payload is the voice data, the 48 bits in the center of each Time Slice contain data used for house keeping and along with other things contains your RSSI data. (Graphic on page \pageref{fig:TDMAPayload}).
+
+ \begin{figure}[H]
+	\centering
+	\includegraphics[scale=.65]{TDMAPayload}
+	\caption{TDMA Frame Bit Structure}
+	\label{fig:TDMAPayload}
+\end{figure}
+
+\subsection{SYNC/SIGNALING)}
+Contained in the center of each TS is data used for housekeeping information.
+\begin{itemize}
+\item 4 Bit Color Code.  Used to isolate adjacent overlapping repeaters (0-15)
+\item Talk Group 
+\item RSSI -  This is a reading of how well the repeater is receiving you in db.  
+\item Talker Alias
+\item DMR ID
+\end{itemize}
+Other signaling information (see specification for all the gory details)
+
+\subsection{CODEC}
+The payload is voice data, compressed to allow 60ms of analog data to fit into 30ms of digital data.  The ESDI specification does not specify any particular Codec to be use, however most manufacturers use the DVSI AMBE+2 licensed in software.
+
+So what actually happens is that 60ms of voice is compressed into 30ms of data (actually 27.5ms). On receive you uncompress 30ms of data and take 60ms to play it back, the reverse happens during transmit.  With this exception, you only transmit on the time slice you are talking on, and stop transmitting during the other time slice,  This means that your radio is transmitting about 50\% of the time compared to analog FM, giving extended battery life.  A repeater is constantly transmitting time slot data.
+
+\subsection{BACK END}
+All repeaters are connected to a bridge of some sorts.  This bridge provides the internet connection to the repeater, and a connection to the network controller.  The data can be and is sometimes connected several ways.  
+
+When using Motorola standards i.e. the DMR-MARC  connected networks, each repeater can have a c-bridge connecting it directly to the server, or can have a connection of up to 15 other repeaters connecting them together is a local network.  Some cities are using this type of connection.  And example is Atlanta-Metro if you are driving around Atlanta, and using Motorola equipment, your radio/repeater combination will make use of your RSSI data, and cause your radio to switch to a repeater that you have a stronger signal into.  
+
+If the repeater is connected directly to the network, they carry the Local TG's, and any STATIC talk groups that the repeater operator has defined for his repeater.  If you want to connect the repeater to another Talk Group, you command it by the PTT method previously discussed. 
+
+The distinction between the DMR-MARC network and the Brandmeister network is this.  The DMR-Marc networks only attach to Motorola equipment.  The Brandmeister network can and does connect to Motorola repeaters, equipment manufactured by others, and home brew equipment, i.e. your hotspot.
+
+\subsection{CODE PLUGS (More Detail)}
+Writing and understanding how your code plug is structured is one of the challenges any new DMR operator must tackle.  While it can be complex, the general layout involves understand some definitions and how they apply.  Basically the code plug tells the radio how to setup the transceiver, what frequency to listen to, what frequency to transmit on, what talk group to decode, what color code to open the squelch, what TIME SLICE to use. The maximum time each transmission can be etc.. 
+
+\section{Definitions}
+
+\subsection{DMR ID}
+	The ID that is assigned to you, this allows your radio to be individualized on the network.  
+\subsection{Time OUT}
+	The amount of time your radio can be in transmit before the transmitter is inhibited. Most repeaters set their timeout timers at 120 seconds (2 minutes) setting you timeout beyond that point will cause you to loose time out the repeater.  If you are using simplex set this timeout as long as you want, it will have no effect.
+\subsection{Admit Criteria} 
+When are you allowed to transmit?
+\begin{itemize}
+\item Always:  This is the most impolite criteria you can choose, but depends on where you use it.  When his criteria is selected your radio transmits anytime you press the PTT button even if the channel is in use.  Used when you don?t want to be polite.
+\item Channel Free:  This selection is the most polite, it will only allow your radio to transmit when there is no traffic on the channel.  Typically used on simplex and for your own hot spot.
+\item Color Code Free: Should always be used with a repeater, it only allows you to transmit when there is no one using the time slice. (very polite)
+\end{itemize}
+\subsection{Color Code}
+DMR transmission use color codes much as analog computers use PL tones.  There are 16 codes (0-15).  The color code is primarily use to keep adjacent transmitters from interfering with communication.  
+\subsection{Time Slice}
+DMR uses TDMA (Time Devision Multiple Access) meaning that time is divided up among users.  DMR uses 2 time domains denoted as TS1, and TS2.  Each time slice can carry separate voice or data simultaneously between radio equipment with interfering with the other time slice.
+
+In your code plug you must define to the channel which time slice you wish to transmit and receive on.  
+\subsection{Power to use on this channel}
+Typically your choice is high or low.  Since most radios have a button that can effect this choice select the power you think you will use most of the time for this channel.
+Receive Frequency
+Frequency that you wish to receive, typically the output frequency of the Repeater, or the simplex frequency you want to use for both sending and receiving.
+Transmit Frequency
+Frequency that you wish to transmit on, typically the frequency your repeater listens to, or the simplex frequency you wish to use for both sending and receiving.
+\subsection{Talk Group}
+The number of the talk group you want this channel to use for this channel program.  Consult the repeater owner, and documentation from BrandMeister, MARK, and other network operators.  Note: remember all Talk Groups are not the same across networks
+\subsection{ZONE}
+Grouping of channels defined in your radio?s code plug.  The grouping is up to you.  While most radios support up to 16 channels per zone, there is not a requirement to have more than one in a zone. Users typically assign channels that have frequency pairs relating to one repeater on a zone named to identify that repeater.  Another example might be a group of channels for analog repeaters located in a county.  In the first instance you might name the zone repeater call sign or location, in the second you might name the zone by a county name.  When using a Hot Spot you might elect to name your zones according to their use, GLOBAL, REGIONAL, STATE, etc.. 
+Zone grouping allows you to keep your huge number of channels under control.  How you set up your channels and zones are 100\% up to you.
+
+\section{Extending your world}
+Lets say you have only a small selection of repeaters in your area, perhaps you only have a DMR-MARC repeater and you want to access the BrandMeister network of repeaters.  Enter the Hot Spot.  This device was first popularized by the D-Star folks to basically create a simplex repeater in their home, and when they go mobile and cannot reach a repeater by using a wireless connection provided by their mobile phone.  Yes many hams install hot spots in their vehicle, and using the cellular network have access all over the world without needing a repeater.
+
+At this point you should have enough information to allow you to understand conversations and presentations about this subject.  if you have not done so at this point read John Burningham?s documentation it will have more meaning if you understand that he is only talking about Motorola networks. If you need more technical documentation look at the actual DMR standard. Ask Questions and have a good time.
+
+I welcome additional information and corrections you would like to contribute to this documentation. Enjoy DMR
+
+\section{Get Involved}
+This DMR Documentation project is always looking for people to contribute to this document.  
+
+If you find an error or would like to see more information in this article please join this project on GitHub.  It takes more than one person to get everything covered and correct.  This project is Open Source and needs contributors.
+\section{Document tracking}
+\begin{itemize}
+\item V1.0 original author Fred Moore dated February 11, 2017   fred@fmeco.com 
+\item V1.1 ? small additions for clarification, and spelling corrections
+\item V1.2 ? expand some thoughts and correct some grammar.
+\item V1.3 ? expand on detail of how it works, with other grammar corrections.
+\item V1.4 ? expand on detail and how to operate with grammar correction. 
+\item V1.5 ? addition of more detail regarding the back end, and construction of code plugs.
+\item V1.6  Convert Document from Pages (mac WISIWIG) to Latex so other can work on document on github
+\end{itemize}
+
+\section{Project Contributors}
+\begin{itemize}
+\item Fred Moore, WD8KNI, fred@fmeco.com
+\item Warren Merkel, KD4Z, hullspeed21@gmail.com
+\end{itemize}
+
+
+\end{document}
