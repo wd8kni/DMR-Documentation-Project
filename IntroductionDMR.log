@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  18 JUN 2017 16:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  18 JUN 2017 18:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -245,7 +245,7 @@ Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lastpage/lastpage.sty
 Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 )
-No file IntroductionDMR.aux.
+(./IntroductionDMR.aux)
 \openout1 = `IntroductionDMR.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -262,6 +262,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -309,6 +310,8 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
+
+(./IntroductionDMR.out) (./IntroductionDMR.out)
 \@outlinefile=\write3
 \openout3 = `IntroductionDMR.out'.
 
@@ -350,7 +353,13 @@ Package lastpage Info: Please have a look at the pageslts package at
 [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
+Overfull \hbox (9.54617pt too wide) in paragraph at lines 58--59
+[]\OT1/cmss/m/n/12 https://github.com/wd8kni/DMR-Documentation-Project/blob/mas
+ter/IntroductionDMR.pdf 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
@@ -360,216 +369,122 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-
-LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 72.
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.72 \clearpage
-                [1]
+l.75 \clearpage
+                [1] (./IntroductionDMR.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 1.
+)
 \tf@toc=\write4
 \openout4 = `IntroductionDMR.toc'.
 
  [2
 
-]
+] (./IntroductionDMR.lof)
 \tf@lof=\write5
 \openout5 = `IntroductionDMR.lof'.
 
- [3
 
-]
+[3
 
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 101.
+] [4
 
-[4
-
-]
-
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 123.
-
-[5]
+] [5]
 Missing character: There is no ö in font cmss12!
-
-
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 140.
-
-[6]
-
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 163.
-
-[7]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 167.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 167.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 167.
-
-Overfull \hbox (64.00092pt too wide) in paragraph at lines 177--178
+ [6] [7]
+Overfull \hbox (64.00092pt too wide) in paragraph at lines 180--181
 \OT1/cmss/m/n/12 MARC net-work is held to-gether by c-bridges con-nected to-get
 her by the K4USD net-work. http://www.k4usd.org
  []
 
-
-LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 182.
-
-[8]
-
-LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 202.
-
-[9]
-
-LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 223.
-
-[10]
-
-LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 241.
-
-[11]
-
-LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 255.
-
-[12]
-
-LaTeX Warning: Reference `fig:DeviationSymbolTable' on page 13 undefined on inp
-ut line 269.
-
-<SymbolDeviationTable.png, id=72, 324.21124pt x 223.83624pt>
+[8] [9] [10] [11] [12]
+<SymbolDeviationTable.png, id=219, 324.21124pt x 223.83624pt>
 File: SymbolDeviationTable.png Graphic file (type png)
 
 <use SymbolDeviationTable.png>
-Package pdftex.def Info: SymbolDeviationTable.png used on input line 273.
+Package pdftex.def Info: SymbolDeviationTable.png used on input line 276.
 (pdftex.def)             Requested size: 243.15784pt x 167.87677pt.
-
-
-LaTeX Warning: Reference `fig:TimeSlot' on page 13 undefined on input line 279.
-
-
-<TDMA.png, id=74, 392.46625pt x 386.44376pt>
+ <TDMA.png, id=222, 392.46625pt x 386.44376pt>
 File: TDMA.png Graphic file (type png)
- <use TDMA.png>
-Package pdftex.def Info: TDMA.png used on input line 283.
+
+<use TDMA.png>
+Package pdftex.def Info: TDMA.png used on input line 286.
 (pdftex.def)             Requested size: 196.23264pt x 193.2214pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 13 undefined on input line 287.
-
-[13pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
- has been already used, duplicate ignored
+ [13pdfTeX warning (ext4): destination with the same identifier (name{figure.1}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.287 
+l.290 
        <./SymbolDeviationTable.png>]
-
-LaTeX Warning: Reference `fig:TDMAFrame' on page 14 undefined on input line 288
-.
-
-<TDMAFrame.png, id=82, 604.2575pt x 258.9675pt>
+<TDMAFrame.png, id=230, 604.2575pt x 258.9675pt>
 File: TDMAFrame.png Graphic file (type png)
  <use TDMAFrame.png>
-Package pdftex.def Info: TDMAFrame.png used on input line 292.
+Package pdftex.def Info: TDMAFrame.png used on input line 295.
 (pdftex.def)             Requested size: 453.19202pt x 194.22513pt.
 
-
-LaTeX Warning: Reference `fig:TDMAPayload' on page 14 undefined on input line 2
-97.
-
-<TDMAPayload.png, id=83, 682.55pt x 249.93375pt>
+<TDMAPayload.png, id=232, 682.55pt x 249.93375pt>
 File: TDMAPayload.png Graphic file (type png)
  <use TDMAPayload.png>
-Package pdftex.def Info: TDMAPayload.png used on input line 301.
+Package pdftex.def Info: TDMAPayload.png used on input line 304.
 (pdftex.def)             Requested size: 443.65225pt x 162.455pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 14 undefined on input line 305.
 
 [14pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.305 
+l.308 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.305 
+l.308 
        <./TDMA.png> <./TDMAFrame.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 309
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 312
 .
-LaTeX Font Info:    No file OMScmss.fd. on input line 309.
+LaTeX Font Info:    No file OMScmss.fd. on input line 312.
 
 
 LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 309.
-
-
-LaTeX Warning: Reference `LastPage' on page 15 undefined on input line 326.
+(Font)              for symbol `textbullet' on input line 312.
 
 [15pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.326 
-       <./TDMAPayload.png>]
-
-LaTeX Warning: Reference `LastPage' on page 16 undefined on input line 345.
-
-[16]
-
-LaTeX Warning: Reference `LastPage' on page 17 undefined on input line 364.
-
-[17]
-
-LaTeX Warning: Reference `LastPage' on page 18 undefined on input line 390.
-
-[18]
-
-Package lastpage Warning: Rerun to get the references right on input line 394.
-
-
+l.329 
+       <./TDMAPayload.png>] [16] [17] [18] 
 AED: lastpage setting LastPage
-
-LaTeX Warning: Reference `LastPage' on page 19 undefined on input line 394.
-
 [19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 394.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 394.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 397.
  (./IntroductionDMR.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 394.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 394.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 397.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 397.
+Package rerunfilecheck Info: File `IntroductionDMR.out' has not changed.
+(rerunfilecheck)             Checksum: 308BEB74C34DE11A0D044D2146B48349;1506.
 
-
-Package rerunfilecheck Warning: File `IntroductionDMR.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `IntroductionDMR.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  308BEB74C34DE11A0D044D2146B48349;1506.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 394.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 397.
  ) 
 Here is how much of TeX's memory you used:
- 6054 strings out of 492995
- 89697 string characters out of 6132704
- 185436 words of memory out of 5000000
- 9518 multiletter control sequences out of 15000+600000
+ 6092 strings out of 492995
+ 90274 string characters out of 6132704
+ 185788 words of memory out of 5000000
+ 9546 multiletter control sequences out of 15000+600000
  9078 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,11n,43p,1055b,387s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -578,10 +493,10 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on IntroductionDMR.pdf (20 pages, 590812 bytes).
+Output written on IntroductionDMR.pdf (20 pages, 594539 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
+ 300 PDF objects out of 1000 (max. 8388607)
+ 262 compressed objects within 3 object streams
  51 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 237 words of extra memory for PDF output out of 10000 (max. 10000000)
 
