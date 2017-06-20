@@ -1,5 +1,5 @@
-##Welcome to the DMR Documentation Project
-
+Welcome to the DMR Documentation Project
+----------------------------------------
 If you wish to be a contributor we welcome you.  The intent of this project is for it to grow to contain relevant information on DMR, and to move new people quickly to a knowledgeable understanding of how it works, and it’s operation
 
 If you are viewing this readme from somewhere else other than the github page.  This project in it’s entirety can be found [here](https://github.com/wd8kni/DMR-Documentation-Project/)
